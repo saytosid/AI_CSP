@@ -1,0 +1,92 @@
+{
+
+	"name":"problem2",
+
+	"variables" :
+		[
+			{
+				"name" : "X1",
+				"domain" : ["r", "b", "g"]
+			},
+
+			{
+				"name" : "X2",
+				"domain" : ["b", "g"]
+			},
+
+			{
+				"name" : "X3",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X4",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X5",
+				"domain" : ["b", "g"]
+			},
+
+			{
+				"name" : "X6",
+				"domain" : ["r", "g", "t"]
+			},
+
+			{
+				"name" : "X7",
+				"domain" : ["r", "b"]
+			}
+		],
+
+	"constraints" :
+		[
+			{
+				"scope" : ["X1", "X2"],
+				"relation" : [["r", "b"], ["r", "g"], ["b", "g"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X1", "X3"],
+				"relation" : [["r", "b"], ["b", "r"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X1", "X4"],
+				"relation" : [["r", "b"], ["b", "r"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X1", "X7"],
+				"relation" : [["r", "b"], ["b", "r"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X2", "X6"],
+				"relation" : [["b", "r"], ["b", "g"], ["b", "t"], ["g", "r"], ["g", "t"]]
+			},
+
+			{
+				"scope" : ["X3", "X7"],
+				"relation" : [["r", "b"], ["b", "r"]]
+			},
+
+			{
+				"scope" : ["X4", "X5"],
+				"relation" : [["r", "b"], ["r", "g"], ["b", "g"]]
+			},
+
+			{
+				"scope" : ["X5", "X7"],
+				"relation" : [["b", "r"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X5", "X6"],
+				"relation" : [["b", "r"], ["b", "g"], ["b", "t"], ["g", "r"], ["g", "t"]]
+			}
+		],
+
+	"ordering" : ["X1", "X2", "X3", "X4", "X5", "X6", "X7"]
+}
