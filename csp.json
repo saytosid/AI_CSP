@@ -6,34 +6,71 @@
 		[
 			{
 				"name" : "X1",
-				"domain" : ["r", "b", "g"]
+				"domain" : [1, 2, 3]
+			},
+			{
+				"name" : "X11",
+				"domain" : [1]
+			},
+			{
+				"name" : "X12",
+				"domain" : [1]
 			},
 
 			{
 				"name" : "X2",
-				"domain" : ["b", "g"]
+				"domain" : [1, 2, 3]
 			},
 
 			{
 				"name" : "X3",
-				"domain" : ["r", "b"]
+				"domain" : [1, 2, 3]
 			}
 		],
 
 	"constraints" :
 		[
 			{
-				"scope" : ["X1", "X2"],
-				"relation" : [["b", "g"], ["g", "b"]]
+				"scope" : ["X11", "X2"],
+				"relation" : [[1, 3],[1, 2],[1, 1]]
+			},
+			{
+				"scope" : ["X11", "X1"],
+				"relation" : [[1, 3],[1, 2],[1, 1]]
+			},
+			{
+				"scope" : ["X11", "X3"],
+				"relation" : [[1, 3],[1, 2],[1, 1]]
+			},
+			{
+				"scope" : ["X11", "X12"],
+				"relation" : [[1, 1]]
+			},
+			{
+				"scope" : ["X12", "X2"],
+				"relation" : [[1, 3],[1, 2],[1, 1]]
+			},
+			{
+				"scope" : ["X12", "X1"],
+				"relation" : [[1, 3],[1, 2],[1, 1]]
+			},
+			{
+				"scope" : ["X12", "X3"],
+				"relation" : [[1, 3],[1, 2],[1, 1]]
 			},
 
+			
 			{
+				"scope" : ["X1", "X2"],
+				"relation" : [[2, 3], [3, 2],[2,2]]
+			},
+            {
 				"scope" : ["X1", "X3"],
-				"relation" : [["r", "b"], ["b", "r"], ["b", "b"]]
+				"relation" : [[1, 2], [2, 1], [2, 2]]
 			},
 			{
 				"scope" : ["X2", "X3"],
-				"relation" : [["g", "b"]]
+				"relation" : [[1, 2], [2, 1], [2, 2]]
 			}
 		],
 
